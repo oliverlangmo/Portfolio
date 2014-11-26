@@ -1,0 +1,97 @@
+@media only screen and (max-width: 500px) {
+    .masthead {
+        padding: 3em;
+    }
+  .masthead-heading {
+        font-size: 3em;
+    }
+  
+}
+body {
+    /* Typography Declarations */
+    color: #222222;
+    font-size: 1em;
+    font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  margin:0;
+}
+.content-footer,
+.masthead-heading,
+.masthead-intro {
+    text-align: center;
+}
+.masthead-intro {
+    margin-bottom: 0.1em;
+  font-family: "Gentium Book Basic", Georgia, serif;
+    font-size: 2em;
+  color: white;
+}
+.masthead-heading {
+    margin-top: -0.2em;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: bold;
+    font-size: 6em;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+}
+.content-footer,
+.Introduction-section,
+.location-section,
+.questions-section {
+  text-align: center;
+}
+.social > li {
+    display: inline-block;
+  padding: 1em;
+  margin: 0;
+}
+ul.social{
+  padding: 0;
+}
+
+}
+.questions-section > h2 {
+    /* Typography Declarations */
+    font-family: "Gentium Book Basic", Georgia, serif;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.masthead {
+  background-image: url(http://i.imgur.com/7NQ5Vfa.jpg);
+  overflow: auto;
+}
+.content-footer {
+  background-color: #EDCB53;
+  margin-top: 5em;
+padding: 4em 0;
+  width: 100%;
+  z-index:9999;
+}
+
+h1 {
+  color: #3D847E;
+  text-align: center;
+}
+
+p, h2 {
+  text-align: center;
+}
+a { 
+text-decoration: none;
+  font-family: "Gentium Book Basic", Georgia, serif;
+  color: black;
+  font-weight: bold;
+}
+img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.projects > p {
+  font-weight: bold;
+  color: blue;
+  font-family: 'Roboto', sans-serif;
+} 
+.projects > h1 {
+  color: black;
+  font-size: 50px;
+}
