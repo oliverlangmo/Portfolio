@@ -24,6 +24,8 @@ body {
   font-family: "Gentium Book Basic", Georgia, serif;
     font-size: 2em;
   color: white;
+  padding-top: 3em;
+  padding-bottom:0;
 }
 .masthead-heading {
     margin-top: -0.2em;
@@ -44,6 +46,14 @@ body {
   padding: 1em;
   margin: 0;
 }
+.Introduction-section, .questions-section, .location-section,.projects{
+  background-color: #E4F3FF;
+}
+p{
+  margin:0;
+  padding:1em;
+}
+
 ul.social{
   padding: 0;
 }
@@ -60,8 +70,8 @@ ul.social{
   overflow: auto;
 }
 .content-footer {
-  background-color: #EDCB53;
-  margin-top: 5em;
+  background-color: #81FAF2;
+  margin-top: 0;
 padding: 4em 0;
   width: 100%;
   z-index:9999;
@@ -70,6 +80,8 @@ padding: 4em 0;
 h1 {
   color: #3D847E;
   text-align: center;
+  margin:0;
+  padding-top:.4em;
 }
 
 p, h2 {
@@ -86,6 +98,7 @@ img.center {
   margin-left: auto;
   margin-right: auto;
 }
+
 .projects > p {
   font-weight: bold;
   color: #3D847E;
