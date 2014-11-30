@@ -57,20 +57,12 @@ p{
 ul.social{
   padding: 0;
 }
-
-}
-.questions-section > h2 {
-    /* Typography Declarations */
-    font-family: "Gentium Book Basic", Georgia, serif;
-    font-size: 1.2em;
-    font-weight: bold;
-}
 .masthead {
   background-image: url(http://i.imgur.com/7NQ5Vfa.jpg);
   overflow: auto;
 }
 .content-footer {
-  background-color: #81FAF2;
+  background-color: #B22E2E;
   margin-top: 0;
 padding: 4em 0;
   width: 100%;
@@ -78,7 +70,7 @@ padding: 4em 0;
 }
 
 h1 {
-  color: #3D847E;
+  color: #B22E2E;
   text-align: center;
   margin:0;
   padding-top:.4em;
@@ -86,6 +78,7 @@ h1 {
 
 p, h2 {
   text-align: center;
+  font-weight: normal;
 }
 a { 
 text-decoration: none;
@@ -101,7 +94,7 @@ img.center {
 
 .projects > p {
   font-weight: bold;
-  color: #3D847E;
+  color: #B22E2E;
   font-family: 'Roboto', sans-serif;
 } 
 .projects > h1 {
