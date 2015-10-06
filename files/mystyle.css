@@ -339,11 +339,11 @@ img.mad_img{margin-top: 25px; width: 455px; margin-left: 130px;}
   left: 0;
   z-index: 100;
 }
-img.ryu_img {
+img.SF_img {
   width: 500px;
   margin-left: 100px;
 }
-.ryu div { width: 250px; margin-left: 75px; }
+.ryu div { width: 250px; margin-left: 75px; top:0;}
 .ryu-ready, .ryu-throwing,.ryu-still, .ryu-cool {
   width: 250px;
   height: 247px;
