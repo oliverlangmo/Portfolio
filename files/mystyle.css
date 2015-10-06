@@ -5,7 +5,7 @@
   .masthead-heading {
         font-size: 1em;
     }
-    .bounce{display:none; margin-top: 50px;}
+    .bounce{display:none;}
     .Introduction-section{font-size: .5em;}
     
 }
@@ -24,13 +24,13 @@ body {
 }
 /*Home Start*/
 .masthead-intro {
-  margin-top: 135px;
+  margin-top: 115px;
     margin-bottom: 0.1em;
   font-family: "Gentium Book Basic", Georgia, serif;
     font-size: 3em;
   color: black;
   padding-top: 2em;
-  padding-bottom:10px;
+  padding-bottom:25px;
   letter-spacing: 0.2em;
 }
 .name {
@@ -128,7 +128,7 @@ p{
 .project_wrap.active .project_card{
   -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
-    box-shadow: -5px 5px 5px #aaa;
+    
 }
 .face {
     position: absolute;
@@ -153,6 +153,7 @@ p{
 .click_more { color: #aaa; margin-top: 2px;}
 .click_more:hover{cursor: pointer; color: black;}
 .click_more1{ color:#aaa; margin-top:15px;}
+.click_more1:hover{cursor: pointer; color: black;}
 .close{ float:right; padding: 10px; border-radius: 2px; cursor: pointer; color: black; }
 .item_info{margin-top: 170px;}
 /*Projects End*/
@@ -252,7 +253,7 @@ text-decoration: none;
   color: black;
   z-index: 100;
 }
-.mad_img{margin-top: 25px; width: 95px;}
+img.mad_img{margin-top: 25px; width: 455px; margin-left: 130px;}
 .visable { 
   display: block;
  z-index: 1000;
