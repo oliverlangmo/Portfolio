@@ -304,15 +304,6 @@ img.mad_img{margin-top: 25px; width: 455px; margin-left: 130px;}
 
 
 
-
-
-
-
-
-
-
-
-
 /* Street-Fighter Start*/
 .main { 
   background-color:white;
@@ -346,8 +337,6 @@ img.SF_img {
   display: none;
 } 
 
-
-}
 .hadouken, .ryu-ready, .ryu-still, .ryu-throwing, .ryu-cool {
   background-repeat: no-repeat;
 }
