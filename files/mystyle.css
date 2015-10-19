@@ -465,11 +465,11 @@ ul.social{
 .bounce:hover{
   cursor: pointer;
 }
-    #Introduction-section{font-size: .5em; outline: 1px solid red;}
+    #Introduction-section{font-size: .5em; }
     #about_me{top:0; margin-top:0;}
     #Introduction-section{padding:0; bottom:0;}
-    .title_name{display: block;padding:15px;margin-top: 0; line-height: 50px; margin-bottom: 0; outline: 1px solid red; }
-    .city{height: 70px; outline: 1px solid red; margin-top: 0;}
+    .title_name{display: block;padding:15px;margin-top: 0; line-height: 50px; margin-bottom: 0;}
+    .city{height: 70px; margin-top: 0;}
     
     
 } /* end of Responsive */
