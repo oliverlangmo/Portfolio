@@ -3,6 +3,12 @@
 
 /* deflaut main css as mobile narrow layout */
 
+
+
+.media_test {  position: fixed;bottom: 75px; left: 25%; right: 25%; height: 7px; background-color: red; }
+
+
+
 body {
     /* Typography Declarations */
     color: #073642;
@@ -11,141 +17,148 @@ body {
   margin:0;
   background-color: white;
 }
-
+/*Nav Start*/
+.nav_wrap {  line-height: 15px; width: 35px; position: fixed; left: 0px; visibility: hidden; height: 105px; z-index:1000;}
+    .nav_wrap:hover{cursor: pointer;}
+    #sidebar{ background-color: #ccc; width:100%; height:100%; position: absolute; z-index:2;left:0; border-top-right-radius: 5px; border-bottom-right-radius: 5px; color: white;}
+    .nav_wrap a{font-size: 15px; letter-spacing: 3px;}
+    .nav_wrap a:hover{background-color: white;}
+   .menu {background: gray; width: 150px;position: absolute;top: 0;right: 0;z-index: 1;-moz-transition: right 0.5s ease; -o-transition: right 0.5s ease;-webkit-transition: right 0.5s ease;transition: right 0.5s ease;
+  border-top-right-radius:5px;border-bottom-right-radius:5px;}
+.menu a {display: block;}
+.nav_wrap:hover .menu {right: -150px;}
+.tablet{display: block;}
+/*Nav End*/
 .content-footer,
 .masthead-heading,
 .masthead-intro {
-    text-align: center;
+  text-align: center;
 }
 /*Home Start*/
 .masthead-intro {
   margin-top: 115px;
-    margin-bottom: 0.1em;
+  margin-bottom: 0.1em;
   font-family: "Gentium Book Basic", Georgia, serif;
-    font-size: 3em;
+  font-size: 3em;
   color: black;
   padding-top: 2em;
   padding-bottom:25px;
   letter-spacing: 0.2em;
+  width: 400px;
 }
-.title_name {  font-size: 75px; }
+
+.title_name { 
+  font-size: 75px;
+}
 
 .name {
-    margin-top: -0.2em;
+  margin-top: -0.2em;
   font-family: "Roboto", "Helvetica Neue", sans-serif;
-    font-weight: bold;
-    font-size: 9em;
-    letter-spacing: 0.20em;
-    color:black;
+  font-weight: bold;
+  font-size: 9em;
+  letter-spacing: 0.20em;
+  color: black;
 }
-.bounce{
- display: none;  
-}
-
-.content-footer,
-#Introduction-section,
-.location-section,
-.questions-section {
-  text-align: center;
+.bounce {
+  display: none;  
 }
 
-
-p{
-  margin:0;
-  padding:1em;
+p {
+  margin: 0;
+  padding: 1em;
 }
 
 
 
 
-.intro_text {
-  line-height: 24px;
-  width: 600px;
-  margin: 0 auto;
-  margin-top: 15px;
-
-}
 /*Home End*/
+
+
+
+
+
+
+
 /*About Me Start*/
 
 
-
-
-
-
 #about_me{
-  width: 1100px;
+  width: 400px;
   height: 400px;
   margin: 0 auto;
   margin-top: 125px;
 }
-.mavis {display: block; margin-left: auto; margin-right: auto;}
+
+
 div.city{
   margin-top: 150px;
-   width:100%;
+   width:400px;
    height: 100%;
    position: relative;
    overflow: hidden;
 }
+
 .city_data{
   position:relative;
 }
 
 .minny{
   height: 400px;
-  right:0px;
-  position: absolute;
+  display: none;
 }
+
 .minny img{
   right:50px;
   position: absolute;
 }
 
-.where{
+.where {
   position: absolute;
   left: 0;
-  font-size: 20px;
+  font-size: 16px;
   font-family: "Roboto", sans-serif;
-  line-height: 45px;
-  text-align: right;
-  width: 435px;
+  line-height: 25px;
+  text-align: left;
+  width: 355px;
 }
 
-.mavis{
+.mavis {
   padding: 30px;
   height: 300px;
+  width: 400px;
+  display: block; 
+  margin: 0 auto; 
 }
 
 .mavis_data {  
   position: relative;
+  width: 300px;
 }
 
-.dog{
+.dog {
   display: inline-block;
-  position: absolute;
-  left: 0;
 }
-.at_home{
-  position: absolute;
-  right: 0;
-  top: 35px;
+
+.at_home {
   width: 400px; 
   text-align: left;
-  font-size: 20px;
-  line-height: 45px;
+  font-size: 16px;
+  line-height: 25px;
 }
 /*About Me End*/
 /*Projects Start*/
 .main_title {          
   font-weight: bold;
-  color: #657b83;
+  color: black;
   font-family: 'Roboto', sans-serif;
-  font-size: 42px;
+  font-size: 30px;
+  text-decoration: underline;
+  width:400px;
 }
 #projects_wrap {  
-  width: 950px;
+  width: 350px;
   margin: 0 auto;
-  margin-top: 465px;
+  margin-top: 565px;
   font-size: 15px;
 }
 .project_wrap {
@@ -153,32 +166,29 @@ div.city{
   vertical-align: top;
   margin:  0 auto;
   margin-bottom: 35px;
-  height: 350px;
   overflow: hidden;
   padding:0;
   
 }
-.project_wrap{
+.project_wrap {
   -webkit-perspective:1000;
   perspective: 1000;
 }
 
-.project_card{
-  width:100%;
+.project_card {
   height:100%;
   -webkit-transform-style: preserve-3d;
     -webkit-transition: all 1.0s linear;
     transform-style: preserve-3d;
     transition: all 1.0s linear;
 }
-.project_wrap:hover{
+.project_wrap:hover {
   position: relative;
   top:-5px;
 }
-.project_wrap.active .project_card{
+.project_wrap.active .project_card {
   -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
-    
 }
 .face {
     position: absolute;
@@ -203,32 +213,66 @@ div.city{
 
 
 
+.dark { 
+ background-color: #EFEBE9; 
+ width: 100%;
+}
+
+.flip { 
+  display: none; 
+}
 
 
+.project_wrap img { 
+  width: 100%; 
+  cursor: pointer; 
+}
+.click_more { 
+  color: #aaa; 
+  margin-top: 2px;
+}
+.click_more:hover {
+  cursor: pointer; 
+  color: black;
+}
+.click_more1 {
+  display: none; 
+}
+.click_more1_mobile {
+  display: block;
+}
 
-.project_wrap img { width: 100%; cursor: pointer; }
-.click_more { color: #aaa; margin-top: 2px;}
-.click_more:hover{cursor: pointer; color: black;}
-.click_more1{ color:#aaa; margin-top:15px;}
-.click_more1:hover{cursor: pointer; color: black;}
-.close{ float:right; padding: 10px; border-radius: 2px; cursor: pointer; color: black; }
-.item_info{margin-top: 20px;}
+.close {float:right; padding: 10px; 
+  border-radius: 2px; 
+  cursor: pointer; 
+  color: black; 
+}
+.item_info {
+  margin-top: 20px;
+}
 /*YouTube Start*/
-.logo_wrap { text-align: center; margin-bottom: 45px; }
+.logo_wrap { text-align: center; 
+  margin-bottom: 45px; 
+}
 .video {
 display: inline-block;
 }
 
-.video iframe{
+.video iframe {
   top: 40px;
   padding: 10px;
 }
-.youtube{display:block; text-align: center; margin-top:-50px;}
-img.logo{ width: 250px; margin: 0 auto; }
-.results{
+.youtube {display:block; 
+  text-align: center; 
+  margin-top:-50px;
+}
+img.logo { width: 250px; 
+  margin: 0 auto; 
+}
+.results {
 top:0;
 }
-.find{                    
+.find {                    
   top: 10px;
   padding-bottom: 25px;
 }
@@ -237,13 +281,11 @@ top:0;
 h1 {
   color: black;
   text-align: center;
-  
 }
 
 p, h2 {
   text-align: center;
   font-weight: normal;
-  
 }
 
 a { 
@@ -325,6 +367,7 @@ img.SF_img {
   width: 500px;
   margin-left: 100px;
 }
+.mobile_card{width:100;}
 .ryu div { width: 250px; margin-left: 75px; top:0;}
 .ryu-ready, .ryu-throwing,.ryu-still, .ryu-cool {
   width: 250px;
@@ -390,25 +433,15 @@ ul.social{
 } /*Footer End*/
 
 
-/*Nav Start*/
-.nav_wrap {  line-height: 15px; width: 35px; position: fixed; left: 0px; visibility: hidden; height: 105px;}
-    .nav_wrap:hover{cursor: pointer;}
-    #sidebar{ background-color: #ccc; width:100%; height:100%; position: absolute; z-index:2;left:0; border-top-right-radius: 5px; border-bottom-right-radius: 5px; color: white;}
-    .nav_wrap a{font-size: 15px; letter-spacing: 3px;}
-    .nav_wrap a:hover{background-color: white;}
-   .menu {background: gray; width: 150px;position: absolute;top: 0;right: 0;z-index: 1;-moz-transition: right 0.5s ease; -o-transition: right 0.5s ease;-webkit-transition: right 0.5s ease;transition: right 0.5s ease;
-  border-top-right-radius:5px;border-bottom-right-radius:5px;}
-.menu a {display: block;}
-.nav_wrap:hover .menu {right: -150px;}
-/*Nav End*/
 
-}
 
 
 
 /* gets wider layout - tablet */
+ 
+@media only screen and ( min-width: 550px) {
 
-@media only screen and (min-width: 550px) {
+  .media_test { background-color: green; content: '750'; }
 
 .bounce{
   display: none;
@@ -422,20 +455,50 @@ ul.social{
   height: 75px;
   letter-spacing: 25px;
 }
-#about_me{width: 100%; display: block; }
-.minny{ position: absolute; right:0; width: 500px; margin-left: 10px;}
-.where{text-align: center; padding-left: 0;}
+#about_me{width: 100%; display: block; margin-top: 250px; }
+.where{text-align: center; margin: 0 auto;}
+.minny{right:0; display: none;}
+.tablet{display: block;}
+.mavis{margin-top: 25px; width:400px; outline: 1px solid red; margin: 0 auto;}
+.dog{width:400px; outline: 1px solid red; margin: 0 auto;}
+.where{line-height: 35px;}
+.at_home{margin-top: 50px; line-height: 35px; margin-right: 70px; outline: 1px solid red;}
+.city{width: 400px; outline: 1px solid red; margin: 0 auto;}
+.main_title{width: 350px; margin-top:150px; outline: 1px solid red;}
+
 
 }
 
-@media only screen and (min-width: 800px) {
-    .masthead {
-        padding: 3em;
-    }
-  .masthead-heading {
-        font-size: 1em;
-    }
+@media only screen and ( min-width: 800px) {
+
+  .at_home{
+  position: absolute;
+  right: 0;
+  top: 35px;
+  width: 400px; 
+  text-align: left;
+  font-size: 20px;
+  line-height: 45px;
+}
+
+.dog{
+  display: inline-block;
+  position: absolute;
+  left: 0;
+}
+
+.flip { display: block; }
+.mobile_card { display: none;}
+
+
+
+  .media_test { background-color: blue; content: "800"; }
+
+    .masthead {padding: 3em;}
+  .masthead-heading {font-size: 1em;}
+  .masthead-intro{padding:10px;}
     .bounce{
+      display: block;
   position:absolute;
   left:44%;
   margin-top: 75px;
@@ -454,13 +517,17 @@ ul.social{
 .bounce:hover{
   cursor: pointer;
 }
-    #Introduction-section{font-size: .5em; }
-    #about_me{top:0; margin-top:0;}
+
+    #about_me{margin-top:355px;}
     #Introduction-section{padding:0; bottom:0;}
-    .title_name{display: block;padding:15px;margin-top: 0; line-height: 50px; margin-bottom: 0;}
+    .title_name {font-size: 120px; display: block;padding:15px;margin-top: 15px; line-height: 50px; margin-bottom:0;}
     .city{height: 70px; margin-top: 0;}
+    .minny{display: block;   right:0px;
+  position: absolute;}
+    .where{margin:0 auto; text-align: right;}
+    .tablet{display: none;}
+
     
-    
-} /* end of Responsive */
+} /* end of Responsive min-width: 800px */
 
 

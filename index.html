@@ -2,6 +2,7 @@
 <html lang="en" ng-app="demoApp">
 <head>
 	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Oliver Langmo - Web Developer</title>
 	<link rel="stylesheet" href="files/mystyle.css">
   <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
@@ -16,7 +17,7 @@
 </head>
 <body>
 
-  
+  <div class="media_test"></div>
 	
   <div class="nav_wrap">
     <div id="sidebar">
@@ -40,22 +41,32 @@
  </section>
 
 
-  <div class='bounce'><a href='#about_me'> <img src='img/downer.png'/></a></div>
+  <div class='bounce'><a href='#about_me'><img src='img/downer.png'/></a></div>
+
+
+
+
+
+
+
 
 
 
 <div id="about_me">
   <div class="city">
     <div class='city_data'>
-     <div class='minny'>
-      <img src='img/cherry.jpg'/>
-      <img src='img/arch.jpg'/>
-      <img src='img/beer.jpg'/>
 
-     </div>
-     <p class='where'>I live in Minneapolis, MN. <br />I love it here, except for winter time, but hey that's only 7 months of the year. <br />But seriously, I couldn't imagine living anywhere else, from beer to broomball, this city has it all.</p>
+     <p class='where'>I live in Minneapolis, MN. <br />I love it here, except for winter time, but hey that's only 7 months of the year. <br /><img class="tablet" src="img/Mnpls_sml.jpg">But seriously, I couldn't imagine living anywhere else, from beer to broomball, this city has it all.</p>
+
+     <div class='minny'>
+        <img src='img/cherry.jpg'/>
+        <img src='img/arch.jpg'/>
+        <img src='img/beer.jpg'/>
+      </div><!-- . photo slide - -->
+
      </div><!-- .city_data - -->
   </div><!-- .city - -->
+
   <div class="mavis">
     <div class="mavis_data">
        <div class='dog'><img src='img/mavis1.png'/></div>  
@@ -64,28 +75,7 @@
   </div><!-- .mavis - -->
 </div><!-- .about me- -->
 
-  <script type='text/javascript'>
-  $(function(){
-    $(window).scroll(function() { 
-        if ($(this).scrollTop() > 300) { 
-            $(".nav_wrap").css('visibility','visible');   
-            $(".nav_wrap").fadeIn('slow');  
-        } 
-        else {     
-            $(".nav_wrap").fadeOut("slow"); 
-        }  
-    });
-});
-  $(function(){
-    $('.minny img:gt(0)').hide();
-    setInterval(function(){
-      $('.minny :first-child').fadeOut()
-         .next('img').fadeIn()
-         .end().appendTo('.minny');}, 
-      3000);
-});
-
-</script>
+  
 
 <div id="projects_wrap">
   <div class="projects_data">
@@ -94,20 +84,24 @@
 
       <p>Used Angular and CORS requests to make a simple video search engine.</p>
 
-      <div class="project_wrap">
-       <div class="project_card">
+      <div class="project_wrap dark">
+        <div class="mobile_card">
+          <img class='mobile_logo'src='img/YouTube-logo.png'>
+          <p class='click_more1_mobile'><a href='#'>Click for Demo</a></p>
+        </div><!-- mobile_card  -->
+
+       <div class="project_card flip">
         <div class="front face">
             <p class="logo_wrap"><img class='logo'src='img/YouTube-logo.png'></p>
               <span class='youtube'>VIDEO SEARCHER</span>
             <p class='click_more1'>Click for Demo</p>
+            
         </div>
-        <div class="back face center">
-          <div class='close'>X</div>
 
+        <div class="back face center"
+          <div class='close'>X</div>
           <div class="youtube_project_wrap" ng-controller='MyController'>
-             
               <h1>YouTube Searcher</h1>
-             
             <div>
               <form class='find' ng-submit="searchYouTube(keyword)">
               <input type="text" name="keyword" ng-model="keyword" required="" placeholder='Keyword search' />
@@ -123,12 +117,18 @@
             </div><!-- .controller -->
           </div><!--youtube_project_wrap - -->
          </div><!--.back face center - -->
+
        </div><!-- .project_card - -->
       </div><!-- .project - -->
 
        <p class="item_info">Used Angular to make a madlibs story. User selects male or female articles and completes prompts and hits submit.</p>
      <div class="project_wrap">
-       <div class="project_card">
+        <div class="mobile_card">
+         <img class='mobile_mad_img' src="img/mad-logo.png" />
+         <p class='click_more1_mobile'><a href="https://oliverlangmo.github.io/Madlibs2/index.html">Click for Demo</a></p>
+        </div><!-- mobile_card  -->
+
+       <div class="project_card flip">
 
         <div class="front face">
           <p>Angular Madlibs Story</p>
@@ -214,70 +214,98 @@
      
         <p class="item_info">Used jQuery to make Ryu throw a Haduken, shout Hadouken and strike his cool pose.</p>
      
-      <div class="project_wrap">
-       <div class="project_card">
+      <div class="project_wrap dark">
 
-        <div class="front face">
-          <p class="sf_title">Street Fighter jQuery Game</p>
-            <img class="SF_img" src="img/SFLogo.png" />
-            <p class="click_more">Click For Demo</p>
-        </div><!-- . front face of card  - -->
+        <div class="mobile_card">
+          <img class="SF_img_mobile" src="img/ryu_project.png" />
+          <p class='click_more1_mobile'><a href='#'>Click for Demo</a></p>
+        
+        </div><!-- mobile_card  -->
 
-        <div class="back face center">
-          <div class='close'>X</div>
-          <div class='main_wrap'>
-            <div class="main">
-             <div class="ryu">
-             <div>
-              <img class='ryu-still'src='img/ryu-standing-still.png'/>
-            </div>
-             <div><img class="ryu-ready" src='img/ryu-ready-position.gif'/></div>
-             <div><img class="ryu-throwing" src='img/ryu-throwing-hadouken.png'/></div>
-             <div><img class="ryu-cool" src='img/ryu-cool.gif'></div>
-             </div>
-             <div class="hadouken_wrap"><img class="hadouken" src='img/hadouken1.gif'></div>
-             <div class="how-to">
-               <p class='action'>Click on Ryu to make him throw </br>a Hadouken!</p>
-               <p class='action'>Press and hold the x key to make him strike his cool pose.</p>
-             </div>
+<div class="project_card flip">
 
-             <audio id="hadouken-sound" src="sound/hadouken.mp3">
-             </audio>
-          </div><!-- /main -- >
-          
-         </div><!-- /main_wrap --> 
+  <div class="front face">
+    <p class="sf_title">Street Fighter jQuery Game</p>
+    <img class="SF_img" src="img/SFLogo.png" />
+    <p class="click_more">Click For Demo</p>
+  </div><!-- . front face of card  - -->
 
-          
-        </div><!-- . back face - -->
+  <div class="back face center">
+    <div class='close'>X</div>
+    <div class='main_wrap'>
+    <div class="main">
+  <div class="ryu">
+    <div>
+     <img class='ryu-still'src='img/ryu-standing-still.png'/>
+     </div>
+     <div><img class="ryu-ready" src='img/ryu-ready-position.gif'/></div>
+     <div><img class="ryu-throwing" src='img/ryu-throwing-hadouken.png'/></div>
+     <div><img class="ryu-cool" src='img/ryu-cool.gif'></div>
+    </div>
+<div class="hadouken_wrap"><img class="hadouken" src='img/hadouken1.gif'></div>
+<div class="how-to">
+<p class='action'>Click on Ryu to make him throw </br>a Hadouken!</p>
+<p class='action'>Press and hold the x key to make him strike his cool pose.</p>
+</div>
 
-       </div>
-      </div><!-- .project - -->
+<audio id="hadouken-sound" src="sound/hadouken.mp3">
+</audio>
+</div><!-- /main -- >
+
+</div><!-- /main_wrap --> 
+
+
+</div><!-- . back face - -->
+
+</div>
+ </div><!-- .project - -->
 
 
 
     </section><!-- .projects - -->
-  </div>
+</div>
 
   <p> For these Projects and more, check out my <a href='https://github.com/oliverlangmo'> github </a></p>
 
 </div><!-- .projects_wrap - -->
 
 
+ <div id="contact">
+   <footer class="content-footer">
+    <p>Say hi to me on these social networks:</p>
+      <ul class="social">
+        <li><a href="https://www.linkedin.com">LinkedIn</a></li>
+        <li><a href="https://www.twitter.com">Twitter</a></li>
+        <li><a href="https://plus.google.com">Google+</a></li>
+        <p>OR</p>
+        <li><a href='mailto:[oliver.langmo@outlook.com]?subject= &body= '>Email Me!</a></li>
+      </ul>
+    </p>
+  </footer>
+</div><!-- .footer_wrap - -->
 
-    <div id="contact">
-      <footer class="content-footer">
+  <script type='text/javascript'>
+      $(function(){
+        $(window).scroll(function() { 
+            if ($(this).scrollTop() > 300) { 
+                $(".nav_wrap").css('visibility','visible');   
+                $(".nav_wrap").fadeIn('slow');  
+            } 
+            else {     
+                $(".nav_wrap").fadeOut("slow"); 
+            }  
+        });
+    });
+      $(function(){
+        $('.minny img:gt(0)').hide();
+        setInterval(function(){
+          $('.minny :first-child').fadeOut()
+             .next('img').fadeIn()
+             .end().appendTo('.minny');}, 
+          3000);
+    });
 
-         <p>Say hi to me on these social networks:</p>
-        <ul class="social">
-          <li><a href="https://www.Github.com">GitHub</a></li>
-          <li><a href="https://www.twitter.com">Twitter</a></li>
-          <li><a href="https://plus.google.com">Google+</a></li>
-          <p>OR</p>
-          <li><a href='mailto:[oliver.langmo@outlook.com]?subject= &body= '>Email Me!</a></li>
-        </ul>
-         </p>
+  </script> 
 
-      </footer>
-  </div><!-- .footer_wrap - -->
-    </body>
-    </html>
+  </body>
+</html>

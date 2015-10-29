@@ -1,5 +1,5 @@
 $(document).ready(function(){
-        $('.project_wrap').mousedown(function() {
+        $('.project_card').mousedown(function() {
     $(this).addClass('active');
     });
   $('.close').on('click',function() {
