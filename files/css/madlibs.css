@@ -1,0 +1,61 @@
+/* Madlibs Start*/
+.madlibs {
+  text-align: center;
+  color: black;
+}
+
+.label {
+  text-align: right;
+  padding-right: 10px;
+  color: black;
+}
+
+.input label {
+  background-color: black;
+}
+
+.select {
+  color: black;
+}
+
+.answers {
+  margin: 0 auto;
+}
+
+.mad_libs_wrap {
+  position: relative;
+}
+
+.input_wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  z-index: 100;
+}
+
+.output {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  color: black;
+  z-index: 100;
+}
+
+img.mad_img {
+  margin-top: 25px;
+  width: 455px;
+  margin-left: 130px;
+}
+
+.visable {
+  display: block;
+  z-index: 1000;
+  opacity: 1;
+  height: 515px;
+}
+
+/* Madlibs End*/
