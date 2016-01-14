@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="demoApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script data-require="angular.js@1.3.10" data-semver="1.3.10" src="https://code.angularjs.org/1.3.10/angular.js"></script>
+  <script type="text/javascript" src="https://code.angularjs.org/1.2.18/angular-animate.min.js"></script>
+  <link rel="stylesheet" href="files/styles.css">
+  <link rel="stylesheet" href="files/css/youtube.css">
+  <link rel="stylesheet" href="files/css/madlibs.css">
+  <link rel="stylesheet" href="files/css/Streetfighter.css">
+  <script src="files/yt.js"></script>
+</head>
+<body>
+  <div id="projects_wrap">
+  <div class="projects_data">
+    <section class="projects">
+      <p class="main_title">Thinkful Course Projects</p>
+
+      <p>Used Angular and CORS requests to make a simple video search engine.</p>
+
+      <div class="project_wrap dark">
+        <div class="mobile_card">
+          <img class='mobile_logo'src='img/YouTube-logo.png'>
+          <p class='click_more1_mobile'><a href='#'>Click for Demo</a></p>
+        </div><!-- mobile_card  -->
+
+        <div class="project_card flip">
+          <div class="front face">
+            <p class="logo_wrap"><img class='logo'src='img/YouTube-logo.png'></p>
+            <span class='youtube'>VIDEO SEARCHER</span>
+            <p class='click_more1'>Click for Demo</p>
+            
+          </div>
+
+          <div class="back face center">
+          <div class='close'>X</div>
+          <div class="youtube_project_wrap" ng-controller='MyController'>
+            <h1>YouTube Searcher</h1>
+            <div>
+              <form class='find' ng-submit="searchYouTube(keyword)">
+                <input type="text" name="keyword" ng-model="keyword" required="" placeholder='Keyword search' />
+                <input type="submit" value="Submit" id="submit" />
+              </form>
+              <div class="results" ng-if="results">
+               <div class='video'ng-repeat="result in results">
+                 
+                <iframe  ng-src="{{ trustSrc(embedUrl + result.id.videoId) }}" frameborder="0" width="210" height="200"></iframe>
+                
+              </div>
+            </div><!-- .results -->
+          </div><!-- .controller -->
+        </div><!--youtube_project_wrap - -->
+      </div><!--.back face center - -->
+
+    </div><!-- .project_card - -->
+  </div><!-- .project - -->
+
+  <p class="item_info">Used Angular to make a madlibs story. User selects male or female articles and completes prompts and hits submit.</p>
+  <div class="project_wrap">
+    <div class="mobile_card">
+     <img class='mobile_mad_img' src="img/mad-logo.png" />
+     <p class='click_more1_mobile'><a href="https://oliverlangmo.github.io/Madlibs2/index.html">Click for Demo</a></p>
+   </div><!-- mobile_card  -->
+
+   <div class="project_card flip">
+
+    <div class="front face">
+      <p>Angular Madlibs Story</p>
+
+      <img class='mad_img' src="img/mad-logo.png" />
+      <p class="click_more">Click for Demo</p>
+    </div>
+    <div class="back face center">
+      <div class='close'>X</div>
+      
+      <div class="wrap" ng-controller='demoCtrl'>
+       <div class="header">
+         <p class='madlibs'>Don't Stop Madlibbin'! </p>
+       </div><!--/header-->
+
+       <div class="mad_libs_wrap">
+         <div class="input_wrap {{inputVisable}}">
+          <div class='select'> <input name='gender' id='male'type="radio" ng model="gender" value="male"ng-click="male()" ></input>
+           <label for='male'>Male</label>
+           <input name='gender' id='female'type="radio" ng model="gender" value="female"ng-click="female()"></input>
+           <label for='female'>Female</label>
+         </div><!-- /.select - -->
+         <p class='madlibs'> Please Provide the following words</p>
+         <table class='answers'>
+          <tr>
+            <td class="label">Name</td>
+            <td class="input"><input type="text"name='handle'ng-model="data.handle" placeholder='First'></td>
+            
+            <td class="label">Adjective</td>
+            <td class="input"><input type="text"name='adjective'ng-model="data.adjective" placeholder='second'></td>
+          </tr> 
+          <tr>
+            <td class="label">Time</td>
+            <td class="input"><input type="text"name='when'ng-model="data.when" placeholder='third'></td>
+            
+            <td class="label">Destination</td>
+            <td class="input"><input type="text"name='where'ng-model="data.where" placeholder='fourth'></td>
+          </tr> 
+          <tr>
+            <td class="label">Location</td>
+            <td class="input"><input type="text"name='place'ng-model="data.place" placeholder='fifth'></td>
+            
+            <td class="label">Time</td>
+            <td class="input"> <input type="text"name='when'ng-model="data.when" placeholder-'sixth'></td>
+          </tr> 
+          <tr>
+            <td class="label">Destination</td>
+            <td class="input"> <input type="text"name='where2'ng-model="data.where2" placeholder='seventh' ></td>
+            
+            <td class="label">Occupation</td>
+            <td class="input"><input type="text"name='job'ng-model="data.job" placeholder='eighth'></td>
+          </tr> 
+          <tr>
+            <td class="label">Adjective</td>
+            <td class="input"><input type="text"name='adjective2'ng-model="data.adjective2" placeholder='ninth'></td>
+
+            <td class="label">Alcohol</td>   
+            <td class="input"><input type="text"name='alcohol'ng-model="data.alcohol" placeholder='tenth'></td>
+          </tr>
+          <tr>
+            <td class="label">Adjective</td> 
+            <td class="input"><input type="text"name='adjective3'ng-model="data.adjective3" placeholder='last one'></td>
+          </tr>
+          <tr>
+            <td><button class='submit' ng-click="submit()">Submit</button></td>
+          </tr>
+        </table>
+      </div>
+      
+      <div class="output {{outputVisable}}">
+       
+       <p>{{data.handle}} was just a small town {{girlboy}}, livin in a {{data.adjective}} world. {{heshe}} took a {{data.when}} train going {{data.where}}. Just a city {{girlboy}}, born and raised in south {{data.place}}, {{heshe}} took a {{data.when}} train going {{data.where2}}. </p> 
+       
+       <p>A {{data.job}} in a {{data.adjective2}} room. The smell of {{data.alcohol}} and {{data.adjective3}} perfume. For a smile they can share the night. It goes on and on and on.</p>
+       <button class='reset' ng-click="reset()">Reset</button>
+     </div>
+   </div><!-- . madlibs_wrap - --> 
+ </div><!--/wrap-->  
+</div>
+</div>
+</div><!-- .project - -->
+
+
+<p class="item_info">Used jQuery to make Ryu throw a Haduken, shout Hadouken and strike his cool pose.</p>
+
+<div class="project_wrap dark">
+
+  <div class="mobile_card">
+    <img class="SF_img_mobile" src="img/ryu_project.png" />
+    <p class='click_more1_mobile'><a href='#'>Click for Demo</a></p>
+    
+  </div><!-- mobile_card  -->
+
+  <div class="project_card flip">
+
+    <div class="front face">
+      <p class="sf_title">Street Fighter jQuery Game</p>
+      <img class="SF_img" src="img/SFLogo.png" />
+      <p class="click_more">Click For Demo</p>
+    </div><!-- . front face of card  - -->
+
+    <div class="back face center">
+      <div class='close'>X</div>
+      <div class='main_wrap'>
+        <div class="main">
+          <div class="ryu">
+            <div>
+             <img class='ryu-still'src='img/ryu-standing-still.png'/>
+           </div>
+           <div><img class="ryu-ready" src='img/ryu-ready-position.gif'/></div>
+           <div><img class="ryu-throwing" src='img/ryu-throwing-hadouken.png'/></div>
+           <div><img class="ryu-cool" src='img/ryu-cool.gif'></div>
+         </div>
+         <div class="hadouken_wrap"><img class="hadouken" src='img/hadouken1.gif'></div>
+         <div class="how-to">
+          <p class='action'>Click on Ryu to make him throw </br>a Hadouken!</p>
+          <p class='action'>Press and hold the x key to make him strike his cool pose.</p>
+        </div>
+
+        <audio id="hadouken-sound" src="sound/hadouken.mp3">
+        </audio>
+      </div><!-- /main -- >
+
+    </div><!-- /main_wrap --> 
+
+
+  </div><!-- . back face - -->
+
+</div>
+</div><!-- .project - -->
+
+
+
+</section><!-- .projects - -->
+</div>
+
+<p> For these Projects and more, check out my <a href='https://github.com/oliverlangmo'> github </a></p>
+
+</div><!-- .projects_wrap - -->
+</body>
+</html>
+

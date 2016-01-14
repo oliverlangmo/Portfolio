@@ -1,0 +1,23 @@
+
+  <div id="about_me">
+    <div class="city">
+      <div class='city_data'>
+
+       <p class='where'>I live in Minneapolis, MN. <br />I love it here, except for winter time, but hey that's only 7 months of the year. <br /><img class="tablet" src="img/Mnpls_sml.jpg">But seriously, I couldn't imagine living anywhere else, from beer to broomball, this city has it all.</p>
+
+       <div class='minny'>
+        <img src='img/cherry.jpg'/>
+        <img src='img/arch.jpg'/>
+        <img src='img/beer.jpg'/>
+      </div><!-- . photo slide - -->
+
+    </div><!-- .city_data - -->
+  </div><!-- .city - -->
+
+  <div class="mavis">
+    <div class="mavis_data">
+     <div class='dog'><img src='img/mavis1.png'/></div>  
+     <p class='at_home'>When I'm not working in web development, I like to hang out with my Basset Hound, Mavis. She is  <span style="color:blue">ridiculously cute</span>.</p> 
+   </div><!-- . mavis_data - -->
+ </div><!-- .mavis - -->
+</div><!-- .about me- -->

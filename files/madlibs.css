@@ -54,6 +54,7 @@ img.mad_img {
   display: block;
   z-index: 1000;
   opacity: 1;
+  height: 515px;
 }
 
 /* Madlibs End*/

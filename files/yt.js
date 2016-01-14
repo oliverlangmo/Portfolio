@@ -5,6 +5,16 @@ var app1 = angular.module('demoApp', [])
 
 
 app1.controller('MyController', function($scope, $http, $sce) {
+
+  $scope.demo_show = '';
+
+  $scope.show_demo = function () { 
+    $scope.demo_show = 'demo_show';
+  };
+
+  $scope.hide_demo = function () { 
+    $scope.demo_show = '';
+  };
 	
   $scope.embedUrl = "http://www.youtube.com/embed/";  /// <--- this one here!!!!!
 		
@@ -51,6 +61,10 @@ app1.controller('demoCtrl', ['$scope', function($scope){
 	$scope.inputVisable = 'visable';
   $scope.outputVisable  = '';
   $scope.gender = '';
+
+  
+
+  
 
 // gender start
   $scope.male = function(){

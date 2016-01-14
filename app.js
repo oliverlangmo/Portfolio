@@ -5,15 +5,10 @@ $(document).ready(function(){
   $('.close').on('click',function() {
       $('.project_wrap').removeClass('active');
     });
+  $(".over").on('click', function() {
+    $(this).addClass('.overlay');
+   });
+  
 });
-$(function(){
-    $(window).scroll(function() { 
-        if ($(this).scrollTop() > 300) { 
-            $(".nav_wrap").css('visibility','visible');   
-            $(".nav_wrap").fadeIn('slow');  
-        } 
-        else {     
-            $(".nav_wrap").fadeOut("slow"); 
-        }  
-    });
-});
+
+

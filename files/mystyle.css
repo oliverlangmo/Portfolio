@@ -164,24 +164,19 @@ div.city {
   text-align: left;
   width: 355px;
 }
-
+/*mavis start*/
 .mavis {
   padding: 30px;
   height: 300px;
   width: 400px;
-  display: block;
   margin: 0 auto;
 }
 
-.mavis_data {
-  position: relative;
-  width: 300px;
-}
 
 .dog {
   display: inline-block;
 }
-
+/*mavis end*/
 .at_home {
   width: 400px;
   text-align: left;
@@ -215,9 +210,6 @@ div.city {
   margin-bottom: 35px;
   overflow: hidden;
   padding: 0;
-}
-
-.project_wrap {
   -webkit-perspective: 1000;
   perspective: 1000;
 }
@@ -353,7 +345,7 @@ ul.social {
 /*Footer End*/
 
 /* gets wider layout - tablet */
-@media only screen and (min-width: 550px) {
+@/*media only screen and (min-width: 550px) {
   .media_test {
     background-color: green;
     content: '750';
@@ -368,7 +360,6 @@ ul.social {
   }
 
   .title_name {
-    display: block;
     font-size: 75px;
     height: 75px;
     letter-spacing: 25px;
@@ -376,7 +367,6 @@ ul.social {
 
   #about_me {
     width: 100%;
-    display: block;
     margin-top: 250px;
   }
 
@@ -429,7 +419,7 @@ ul.social {
     margin-top: 150px;
     outline: 1px solid red;
   }
-}
+}*/
 
 @media only screen and (min-width: 800px) {
   .at_home {
@@ -548,6 +538,9 @@ ul.social {
     display: block;
     outline: 1px solid red;
     width: 400px;
+  }
+  .project_wrap{
+    overflow: visible;
   }
 }
 
